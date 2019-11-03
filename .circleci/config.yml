@@ -1,11 +1,17 @@
 version: 2.0
 jobs:
- Hello-world:
-  docker:
-   - image: alphine:3.7
-  steps:
-   - run:
-      name: Hello-World
-      command: |
-       echo 'Hello World'
-       echo 'This is the delevry pipeline'
+  Hello-World:
+    docker:
+      - image: alphine:3.7
+    steps:
+      - run:
+        name: Hello-World
+          command: |
+            echo 'Hello World'
+            echo 'This is the delevry pipeline'
+
+workflows:
+version: 2
+  Example_Workflow:
+    jobs:
+      - Hello-World
