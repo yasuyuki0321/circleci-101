@@ -9,9 +9,22 @@ jobs:
           command: |
             echo 'Hello World'
             echo 'This is the delevry pipeline'
+  I-Have-Code:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - checkout
+      - run:
+          name: コード取得
+          command: |
+            ls -al
+            echo '^^^That should look familiar^^^'
 
 workflows:
   version: 2
   Example_Workflow:
     jobs:
       - Hello-World
+      - I-Have-Code
+        requires:
+          - Hello-World
