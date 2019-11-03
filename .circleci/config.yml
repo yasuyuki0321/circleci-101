@@ -33,7 +33,7 @@ jobs:
     steps:
       - run:
           name: 承認の完了
-          commnd: |
+          command: |
             echo 'Do work once the approval compted'
 
 workflows:
