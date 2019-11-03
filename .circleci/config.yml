@@ -12,6 +12,6 @@ jobs:
 
 workflows:
 version: 2
-  Example_Workflow:
-    jobs:
-      - Hello-World
+Example_Workflow:
+  jobs:
+    - Hello-World
