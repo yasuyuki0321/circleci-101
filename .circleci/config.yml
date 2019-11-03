@@ -19,6 +19,14 @@ jobs:
           command: |
             ls -al
             echo '^^^That should look familiar^^^'
+  Run-With-Node:
+    docker:
+      - image: circkeci/node:10-browsers
+    steps:
+      - run:
+          name: ノードを持つコンテナで実行
+          command: |
+            node -v
 
 workflows:
   version: 2
@@ -28,3 +36,7 @@ workflows:
       - I-Have-Code:
           requires:
             - Hello-World
+      - Run-With-Node:
+          requires:
+            - Hello-World
+            
