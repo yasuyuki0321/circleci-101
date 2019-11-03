@@ -6,9 +6,9 @@ jobs:
     steps:
       - run:
         name: Hello-World
-          command: |
-            echo 'Hello World'
-            echo 'This is the delevry pipeline'
+        command: |
+          echo 'Hello World'
+          echo 'This is the delevry pipeline'
 
 workflows:
 version: 2
