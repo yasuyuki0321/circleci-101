@@ -21,7 +21,7 @@ jobs:
             echo '^^^That should look familiar^^^'
   Run-With-Node:
     docker:
-      - image: circkeci/node:10-browsers
+      - image: circleci/node:10-browsers
     steps:
       - run:
           name: ノードを持つコンテナで実行
