@@ -5,10 +5,10 @@ jobs:
       - image: alphine:3.7
     steps:
       - run:
-        name: Hello-World
-        command: |
-          echo 'Hello World'
-          echo 'This is the delevry pipeline'
+          name: Hello-World
+          command: |
+            echo 'Hello World'
+            echo 'This is the delevry pipeline'
 
 workflows:
   version: 2
