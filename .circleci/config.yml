@@ -27,6 +27,14 @@ jobs:
           name: ノードを持つコンテナで実行
           command: |
             node -v
+  Now-Complete:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - run:
+          name: 承認の完了
+          commnd: |
+            echo 'Do work once the approval compted'
 
 workflows:
   version: 2
@@ -39,4 +47,11 @@ workflows:
       - Run-With-Node:
           requires:
             - Hello-World
-            
+      - Hold-For-Approval:
+          type: approval
+          requires:
+            - Hello-World
+            - I-Have-Code
+      - Now-Complete:
+          requires:
+            - Hold-For-Approval
