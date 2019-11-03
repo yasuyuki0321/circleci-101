@@ -6,6 +6,6 @@ jobs:
     steps:
       - run:
         name: 最初の一歩
-        command: |
+        command:|
           echo 'Hello Wirld'
           echo 'This is the delivery pipeline'
