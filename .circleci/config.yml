@@ -3,9 +3,9 @@ jobs:
   build:
     docker:
       - image: alpine:3.7
-  steps:
-    - run:
-      name: 最初の一歩
-      command:|
-        echo 'Hello Wirld'
-        echo 'This is the delivery pipeline'
+    steps:
+      - run:
+        name: 最初の一歩
+        command: |
+          echo 'Hello Wirld'
+          echo 'This is the delivery pipeline'
