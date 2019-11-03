@@ -1,21 +1,11 @@
 version: 2.0
 jobs:
- build:
+ Hello-world:
   docker:
-   - image: circleci/node:10-browsers
+   - image: alphine:3.7
   steps:
-   - checkout
    - run:
-      name: 最初の一歩
+      name: Hello-World
       command: |
-       echo 'Hello Wirld'
-       echo 'This is the delivery pipeline'
-   - run:
-      name: コードの取得
-      command: |
-       ls -alR
-       echo '^^^That should look familiar^^^'
-   - run:
-      name: 独自コンテナで実行
-      command: |
-       node -v
+       echo 'Hello World'
+       echo 'This is the delevry pipeline'
