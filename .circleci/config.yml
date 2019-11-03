@@ -47,11 +47,13 @@ workflows:
       - Run-With-Node:
           requires:
             - Hello-World
-      - Hold-For-Approval:
-          type: approval
+#      - Hold-For-Approval:
+#          type: approval
+#          requires:
+#            - Hello-World
+#            - I-Have-Code
+      - Now-Complete:
           requires:
             - Hello-World
             - I-Have-Code
-      - Now-Complete:
-          requires:
-            - Hold-For-Approval
+#           - Hold-For-Approval
